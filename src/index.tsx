@@ -7,7 +7,7 @@ import { Container } from './styles'
 //   text: string
 // }
 
-export const ExampleComponent = () => {
+export const Slider = () => {
   const background =
     'https://user-images.githubusercontent.com/54639269/95382485-18568b00-08c0-11eb-956c-ed6305fb3dee.png'
 

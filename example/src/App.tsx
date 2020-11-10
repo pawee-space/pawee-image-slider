@@ -1,10 +1,9 @@
 import React from 'react'
 
-import { ExampleComponent } from 'pawee-image-slider'
-import 'pawee-image-slider/dist/index.css'
+import { Slider } from 'pawee-image-slider'
 
 const App = () => {
-  return <ExampleComponent />
+  return <Slider />
 }
 
 export default App

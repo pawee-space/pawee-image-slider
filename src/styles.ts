@@ -41,6 +41,7 @@ export const Container = styled.div`
     width: 100%;
     height: 40%;
     flex-direction: column;
+    margin-bottom: 7px;
 
     h1 {
       font: 500 40px Poppins;
@@ -64,6 +65,7 @@ export const Container = styled.div`
       text-decoration: none;
       padding: 0.7rem 1.5rem;
       text-align: center;
+      box-sizing: unset;
       &:hover {
         cursor: pointer;
         background: #5c2e8a;
