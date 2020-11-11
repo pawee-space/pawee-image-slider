@@ -6,7 +6,7 @@ interface ContainerProps {
   height: string
 }
 
-export const Container = styled(animated.div)<ContainerProps>`
+export const Fade = styled(animated.div)<ContainerProps>`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@300&display=swap');
 
@@ -24,6 +24,7 @@ export const Container = styled(animated.div)<ContainerProps>`
 
   svg {
     position: absolute;
+    z-index: 3;
     bottom: 0;
     color: #663399;
     font-size: 50px;
@@ -55,7 +56,6 @@ export const Container = styled(animated.div)<ContainerProps>`
     width: 100%;
     height: 40%;
     flex-direction: column;
-    margin-bottom: 7px;
 
     h1 {
       font: 500 40px Poppins;
@@ -87,6 +87,11 @@ export const Container = styled(animated.div)<ContainerProps>`
       }
     }
   }
+`
+export const Container = styled.div`
+  position: relative;
+  width: auto;
+  height: auto;
 `
 
 export const IconLeft = styled.img`

@@ -1,6 +1,6 @@
 import React from 'react'
 import { FiArrowRightCircle, FiArrowLeftCircle } from 'react-icons/fi'
-import { Container } from './styles'
+import { Container, Fade } from './styles'
 
 interface CarouselProps {
   width: string
@@ -26,16 +26,18 @@ const Carousel: React.FC<CarouselProps> = ({
   next
 }) => {
   return (
-    <Container width={width} height={height} style={style}>
-      <img src={image} />
-      <FiArrowLeftCircle className='left' onClick={prev} />
-      <FiArrowRightCircle className='right' onClick={next} />
+    <Container>
+      <Fade width={width} height={height} style={style}>
+        <img src={image} />
+        <FiArrowLeftCircle className='left' onClick={prev} />
+        <FiArrowRightCircle className='right' onClick={next} />
 
-      <div>
-        <h1>{name}</h1>
-        <p>{bio}</p>
-        <a href={url}>Ver Perfil</a>
-      </div>
+        <div>
+          <h1>{name}</h1>
+          <p>{bio}</p>
+          <a href={url}>Ver Perfil</a>
+        </div>
+      </Fade>
     </Container>
   )
 }
