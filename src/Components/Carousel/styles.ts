@@ -1,16 +1,25 @@
 import styled from 'styled-components'
+import { animated } from 'react-spring'
 
-export const Container = styled.div`
+interface ContainerProps {
+  width: string
+  height: string
+}
+
+export const Container = styled(animated.div)<ContainerProps>`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@300&display=swap');
 
-  position: relative;
-  width: auto;
-  height: auto;
+  position: absolute;
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
   display: inline-block;
 
   img {
     border-radius: 15px 15px 0 0;
+    width: ${(props) => props.width};
+    height: ${(props) => props.height};
+    position: absolute;
   }
 
   svg {
@@ -18,6 +27,11 @@ export const Container = styled.div`
     bottom: 0;
     color: #663399;
     font-size: 50px;
+
+    &:hover {
+      color: #663399;
+      cursor: pointer;
+    }
   }
 
   .left {

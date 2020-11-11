@@ -1,6 +1,6 @@
 {
   "name": "pawee-image-slider",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Image slideshow component widely editable",
   "author": "Pawee Space",
   "license": "MIT",
@@ -8,6 +8,9 @@
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "engines": {
     "node": ">=10"
   },
@@ -63,6 +66,7 @@
   ],
   "dependencies": {
     "react-icons": "^3.11.0",
+    "react-spring": "^8.0.27",
     "styled-components": "^5.2.1"
   }
 }
