@@ -27,8 +27,7 @@ const Carousel: React.FC<CarouselProps> = ({
 }) => {
   return (
     <Container>
-      <Fade width={width} height={height} style={style}>
-        <img src={image} />
+      <Fade width={width} height={height} bg={image} style={style}>
         <FiArrowLeftCircle className='left' onClick={prev} />
         <FiArrowRightCircle className='right' onClick={next} />
 

@@ -4,6 +4,7 @@ import { animated } from 'react-spring'
 interface ContainerProps {
   width: string
   height: string
+  bg: string
 }
 
 export const Fade = styled(animated.div)<ContainerProps>`
@@ -14,18 +15,17 @@ export const Fade = styled(animated.div)<ContainerProps>`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   display: inline-block;
+  background: url(${(props) => props.bg}) no-repeat center;
 
   img {
     border-radius: 15px 15px 0 0;
     width: ${(props) => props.width};
     height: ${(props) => props.height};
-    position: absolute;
+    position: relative;
   }
 
   svg {
-    position: absolute;
-    z-index: 3;
-    bottom: 0;
+    position: relative;
     color: #663399;
     font-size: 50px;
 
@@ -37,23 +37,23 @@ export const Fade = styled(animated.div)<ContainerProps>`
 
   .left {
     left: 0;
-    margin: 0 0 30% 6%;
+    margin: 17.6% 0 10% 6%;
   }
 
   .right {
     right: 0;
-    margin: 0 6% 30% 0;
+    margin: 17.6% 0 10% 78%;
   }
 
   div {
-    position: absolute;
+    position: relative;
     background: rgba(255, 255, 255, 0.5);
     display: flex;
     justify-content: center;
-    padding-left: 15rem;
     left: 0;
     bottom: 0;
-    width: 100%;
+    padding-left: 10rem;
+    width: Math(${(props) => props.width} - 10rem);
     height: 40%;
     flex-direction: column;
 
@@ -95,13 +95,13 @@ export const Container = styled.div`
 `
 
 export const IconLeft = styled.img`
-  position: absolute;
+  position: relative;
   left: 0;
   bottom: 0;
   margin: 0 0 30rem 6rem;
 `
 export const IconRight = styled.img`
-  position: absolute;
+  position: relative;
   right: 0;
   bottom: 0;
   margin: 0 6rem 30rem 0;
