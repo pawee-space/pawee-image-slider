@@ -5,7 +5,10 @@ import { Container } from './styles'
 interface CarouselProps {
   width: string
   height: string
+  image: string
   url: string
+  name: string
+  bio: string
   style: any
   prev: () => void
   next: () => void
@@ -14,21 +17,24 @@ interface CarouselProps {
 const Carousel: React.FC<CarouselProps> = ({
   width,
   height,
-  url,
+  image,
   style,
+  url,
+  name,
+  bio,
   prev,
   next
 }) => {
   return (
     <Container width={width} height={height} style={style}>
-      <img src={url} />
+      <img src={image} />
       <FiArrowLeftCircle className='left' onClick={prev} />
       <FiArrowRightCircle className='right' onClick={next} />
 
       <div>
-        <h1>Nome da Ong</h1>
-        <p>Descrição da Ong e chamada para conhecer o perfil</p>
-        <a href='https://a.com'>Ver Perfil</a>
+        <h1>{name}</h1>
+        <p>{bio}</p>
+        <a href={url}>Ver Perfil</a>
       </div>
     </Container>
   )
